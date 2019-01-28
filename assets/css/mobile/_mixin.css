@@ -1,0 +1,14 @@
+@define-mixin i $image, $type: png {
+    background: url('/images/mobile/$(image)@2x.$(type)') 0 0 no-repeat;
+    background-size: size('public/images/mobile/$(image)@2x.$(type)', 2);
+    width: width('public/images/mobile/$(image)@2x.$(type)', 2);
+    height: height('public/images/mobile/$(image)@2x.$(type)', 2);
+}
+
+@define-mixin io $image, $type: png {
+    background: url('/images/mobile/$(image).$(type)') 0 0 no-repeat;
+    background-size: size('public/images/mobile/$(image).$(type)');
+    width: width('public/images/mobile/$(image).$(type)');
+    height: height('public/images/mobile/$(image).$(type)');
+}
+

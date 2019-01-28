@@ -1,0 +1,91 @@
+.swiper {
+    &-prev {
+        &-default {
+            @mixin io icon/arrow-default, svg;
+            width: 30px;
+            height: 100px;
+            background-position: 50% 50%;
+            transform: rotate(180deg);
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            z-index: 10;
+            margin-top: -50px;
+            border: none;
+            transition: all .2s easeInOutCubic;
+            outline: none !important;
+            &_white {
+                @mixin io icon/arrow-default_white, svg;
+                width: 30px;
+                height: 100px;
+                background-position: 50% 50%;
+            }
+            &.swiper-button-disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &-circle {
+            @mixin io icon/circle-prev, svg;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            z-index: 10;
+            margin-top: -76px;
+            margin-right: -70px;
+            border: none;
+            transition: all .2s easeInOutCubic;
+            outline: none !important;
+            z-index: -1;
+            &.swiper-button-disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+    &-next {
+        &-default {
+            @mixin io icon/arrow-default, svg;
+            width: 30px;
+            height: 100px;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            z-index: 10;
+            margin-top: -50px;
+            border: none;
+            transition: all .2s easeInOutCubic;
+            outline: none !important;
+            &_white {
+                @mixin io icon/arrow-default_white, svg;
+                width: 30px;
+                height: 100px;
+                background-position: 50% 50%;
+            }
+            &.swiper-button-disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &-circle {
+            @mixin io icon/circle-next, svg;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            z-index: 10;
+            margin-top: -76px;
+            margin-left: -70px;
+            border: none;
+            transition: all .2s easeInOutCubic;
+            outline: none !important;
+            z-index: -1;
+            &.swiper-button-disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}

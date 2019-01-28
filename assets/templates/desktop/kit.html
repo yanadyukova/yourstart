@@ -1,0 +1,63 @@
+@@include('templates/desktop/include/header.html')
+
+<style>
+    body {
+        margin: 10px;
+    }
+    h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    header,
+    footer {
+        display: none;
+    }
+</style>
+
+<h2>Модальные окна</h2>
+<h3>Реф. ссылка</h3>
+<div data-toggle="modal" data-target=".jsModalReferal" class="button">Реф. ссылка</div>
+<div data-toggle="modal" data-target=".jsModalReferalEdit" class="button">Реф. ссылка редактирование</div>
+<br>
+<h3>Вход</h3>
+<div data-toggle="modal" data-target=".jsModalLogin" class="button">Авторизация</div>
+<br>
+<h3>Общие</h3>
+<div data-modal-video data-src="https://www.youtube.com/embed/P38acjc8DyY" class="button">Видео</div>
+<div data-toggle="modal" data-target=".jsModalCountryConfirm" class="button">Смена языка</div>
+<div data-toggle="modal" data-target=".jsModalError" class="button">Ошибка</div>
+
+<h3>История успеха</h3>
+<div data-toggle="modal" data-target=".jsModalInstruction" class="button">Пошаговая инструкция</div>
+<div data-toggle="modal" data-target=".jsModalNewStory" class="button">Добавить историю успеха</div>
+
+<h3>Форма заявки</h3>
+<div data-toggle="modal" data-target=".jsModalRequestForm" class="button">Отправить заявку</div>
+<div data-toggle="modal" data-target=".jsModalSuccess" class="button">Успех</div>
+
+<h3>Олапик</h3>
+<div data-modal-olapic data-modal-class=".jsModalGallery" class="button">Олапик галерея</div>
+
+
+<br><br><br>
+<h2>Кнопки</h2>
+<a href="#" class="button"><span>button</span><i></i></a>
+<a href="#" class="button button-primary"><span>button-primary</span><i></i></a>
+<a href="#" class="button button-light"><span>button-light</span><i></i></a>
+
+<a href="#" class="button disabled"><span>button disabled</span></a>
+<br><br>
+<div class="loading">
+    <button disabled href="#" class="button"><span>button disabled</span></button>
+    <a href="#" class="button"><span>button</span></a>
+    <a href="#" class="button button-primary"><span>button-primary</span></a>
+    <a href="#" class="button button-light"><span>button-light</span></a>
+</div>
+
+@@include('templates/desktop/include/footer.html')

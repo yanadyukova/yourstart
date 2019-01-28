@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Oriflame</title>
+        @@if (context.favicon === false) {
+        <link rel="shortcut icon" href="/favicon.png">
+        }
+        @@if (context.favicon === true) {@@include('templates/favicon.html')}
+
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:300,400,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+
+        <link href="/bundles/css/mobile.min.css" rel="stylesheet">
+    </head>
+<body class="mobile">
+
+<header class="header">
+    <div class="kit-container header__inner">
+        <!-- <div class="header__item">
+            <a href="#" class="header__logo"></a>
+        </div> -->
+        <div class="header__item">
+            <div class="header__lang">
+                <div class="lang jsLang">
+                    <div class="lang__toggle ru">
+                        <a href="#" class="lang-toggle ru jsLangToggle"></a>
+                    </div>
+                    <div class="lang__list" style="visibility: hidden; opacity: 0;">
+                        <ul>
+                            <li class="ru"><a href="//oriflame-beauty-dev.uiux.ru/?country_settled=true"><i></i><span>Россия</span></a></li>
+                            <li class="by"><a href="//by.oriflame-beauty-dev.uiux.ru/?country_settled=true"><i></i><span>Беларусь</span></a></li>
+                            <li class="ua"><a href="//ua.oriflame-beauty-dev.uiux.ru/?country_settled=true" data-toggle="modal" data-target=".jsModalLang-ua"><i></i><span>Украина</span></a></li>
+                            <li class="kz"><a href="//kz.oriflame-beauty-dev.uiux.ru/?country_settled=true" data-toggle="modal" data-target=".jsModalLang-kz"><i></i><span>Казахстан</span></a></li>
+                            <li class="am"><a href="//am.oriflame-beauty-dev.uiux.ru/?country_settled=true" data-toggle="modal" data-target=".jsModalLang-am"><i></i><span>Армения</span></a></li>
+                            <li class="az"><a href="//az.oriflame-beauty-dev.uiux.ru/?country_settled=true"><i></i><span>Азербайджан</span></a></li>
+                            <li class="kg"><a href="//kg.oriflame-beauty-dev.uiux.ru/?country_settled=true"><i></i><span>Кыргызстан</span></a></li>
+                            <li class="mn"><a href="//mn.oriflame-beauty-dev.uiux.ru/?country_settled=true"><i></i><span>Монголия</span></a></li>
+                            <li class="md"><a href="//md.oriflame-beauty-dev.uiux.ru/?country_settled=true" data-toggle="modal" data-target=".jsModalLang-md"><i></i><span>Молдова</span></a></li>
+                            <li class="ge"><a href="//ge.oriflame-beauty-dev.uiux.ru/?country_settled=true"><i></i><span>Грузия</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__item">
+            <div class="header__button">
+                <a data-toggle="modal" data-target=".jsModalReferal" href="#" class="header-button header-button_default"><span>СОЗДАТЬ РЕФ. ССЫЛКУ</span></a>
+            </div>
+        </div>
+        <div class="header__item">
+            <div class="header__nav">
+                <a href="#" class="nav-toggle jsNavToggle"><span></span><span></span><span></span></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="nav jsNav" style="visibility: hidden;">
+    <div class="nav__bg"></div>
+    <div class="nav__inner">
+        <div class="nav__list kit-container">
+            <ul>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_future">Тебя ждет</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_connect">МЫ ЗАНИМАЕМСЯ</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_events">ОТКРЫВАЙ МИР ВМЕСТЕ С НАМИ</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_videos">УЗНАВАЙ НОВОЕ</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_history">БЕРИ ПРИМЕР С ЛУЧШИХ</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_olapic">ЖИВИ В СТИЛЕ #ТВОЙСТАРТ</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_social">СТАНЬ ЧАСТЬЮ НАШЕЙ КОМАНДЫ</a></li>
+                <li><a class="jsNavToggle jsScrollTo" href="#section_business">Бизнес материалы</a></li>
+                <li><a href="#" data-toggle="modal" data-target=".jsModalLogin">Войти</a></li>
+                <li><a href="#">Выйти</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- ############# -->
+<!-- CONTENT START -->
+<!-- ############# -->

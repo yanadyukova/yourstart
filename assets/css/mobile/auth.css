@@ -1,0 +1,53 @@
+.auth {
+    &__inner {
+        padding-bottom: 45px;
+    }
+    &__group {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    &__link {
+        text-align: center;
+        a {
+            font-size: 13px;
+            color: #f1628b;
+        }
+    }
+    &__button {
+        margin-top: 30px;
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+.reg {
+    background-image: linear-gradient(to left, #3c21b8, #8f14fd);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -45px;
+    &__inner {
+        padding: 30px 30px 25px 30px;
+    }
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__desc {
+        font-size: 14px;
+        color: #fff;
+        margin-top: 5px;
+    }
+    &__button {
+        margin-top: 20px;
+        .button {
+            width: 100%;
+            border: solid 2px #50e3c2;
+            background: none;
+            color: #ffffff;
+        }
+    }
+}

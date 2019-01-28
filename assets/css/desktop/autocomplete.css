@@ -1,0 +1,25 @@
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    z-index: 2000 !important;
+    background-color: #fff;
+    padding: 10px 0;
+    border: solid 1px #e2e2e2;
+    border-top: none;
+    max-height: 270px;
+    overflow: auto;
+    > li {
+        > div {
+            display: block;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 10px;
+            transition: all .1s easeInOutCubic;
+            &:hover {
+                background-color: #f0e6f9;
+            }
+        }
+    }
+}

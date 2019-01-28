@@ -1,0 +1,173 @@
+.form-control {
+    &.error {
+        input {
+            color: #d75a4a;
+            border-bottom-color: #d75a4a;
+        }
+    }
+    .error {
+        font-size: 13px;
+        color: #d75a4a;
+        /*text-align: center;*/
+    }
+    input {
+        height: 25px;
+        line-height: 24px;
+        padding: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #00024f;
+        width: 100%;
+
+        color: var(--color-font);
+        font-family: var(--font-base);
+        font-size: 13px;
+        font-weight: 400;
+        outline: none !important;
+    }
+    textarea {
+        resize: none;
+        height: 25px;
+        /*line-height: 25px;*/
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #00024f;
+        width: 100%;
+
+        color: var(--color-font);
+        font-family: var(--font-base);
+        font-size: 13px;
+        font-weight: 400;
+        outline: none !important;
+        line-height: 16px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        &:focus {
+            height: 75px;
+        }
+    }
+    &_big {
+        input {
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+        }
+        textarea {
+            height: 37px;
+            font-size: 14px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            transition: all .2s easeInOutCubic;
+            &:focus {
+                height: 59px;
+            }
+            &:not([value='']) {
+                height: 59px;
+            }
+        }
+    }
+    &_hidden {
+        display: none !important;
+    }
+    &-button {
+        position: absolute;
+        top: -5px;
+        left: -70px;
+        display: block;
+        @mixin io icon/plus, svg;
+    }
+    &_video {
+        border-bottom: 1px solid #00024f;
+        text-align: left;
+        span {
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 30px;
+            color: var(--color-font);
+            font-family: var(--font-base);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 25px;
+        }
+        input {
+            display: inline-block;
+            width: 120px;
+            vertical-align: top;
+            border-bottom: none;
+            padding-left: 0 !important;
+        }
+    }
+}
+
+.checkbox {
+    text-align: left;
+    position: relative;
+    margin-bottom: 5px;
+    &.error {
+        input[type = checkbox] {
+            &:not(:checked)+i,
+            &:not(:checked)+div+i {
+                border-color: #E9028A;
+            }
+        }
+    }
+    input[type = checkbox] {
+        display: none;
+        &+i,
+        &+div+i {
+            position: absolute;
+            left: 7px;
+            top: 0;
+            content: '';
+            width: 18px;
+            height: 18px;
+            border: 1px solid #000000;
+            transition: all .2s linear;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 18px;
+                bottom: -1px;
+                right: -1px;
+                border-right: 1px solid #000000;
+                border-bottom: 1px solid #000000;
+                transform-origin: 0 100%;
+                transition: all .2s linear;
+                opacity: 0;
+            }
+        }
+        &:checked+i,
+        &:checked+div+i {
+            border-color: transparent;
+            &:before {
+                border-right-width: 1px;
+                border-bottom-width: 1px;
+                transform: rotate(45deg) translate3d(-13px, 0px, 0);
+                opacity: 1;
+            }
+        }
+    }
+    span {
+        display: inline-block;
+        font-size: 16px;
+        padding-left: 32px;
+        text-align: left;
+    }
+    .error {
+        color: red;
+        font-size: 12px;
+        text-align: left;
+        padding-left: 10px;
+        margin-top: 4px;
+        display: none;
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

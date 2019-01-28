@@ -1,0 +1,50 @@
+.video-link {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    display: block;
+    height: 0;
+    padding-bottom: 56.5%;
+    background-color: #d7d7d7;
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+    }
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @mixin io icon/play, svg;
+        content: '';
+        margin-top: -31px;
+        margin-left: -31px;
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @mixin io icon/play, svg;
+        content: '';
+        margin-top: -31px;
+        margin-left: -31px;
+        opacity: 0;
+        transition: all .2s easeInOutCubic;
+    }
+    &__caption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}

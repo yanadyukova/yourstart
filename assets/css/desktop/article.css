@@ -1,0 +1,227 @@
+.article {
+    position: relative;
+    overflow: hidden;
+    &__circle {
+        position: absolute;
+        &_1 {
+             width: 402px;
+             height: 402px;
+             border-radius: 402px;
+             left: 50%;
+             border: 70px solid var(--color-green);
+             margin-top: -255px;
+             margin-left: 370px;
+        }
+        &_3 {
+             width: 444px;
+             height: 444px;
+             border-radius: 444px;
+             border: 70px solid var(--color-ligth);
+             left: 50%;
+             margin-left: -256px;
+             margin-top: 77px;
+             z-index: -1;
+        }
+        &_2 {
+         @mixin io circle/3, svg;
+             width: 160px;
+             height: 160px;
+             background-size: 160px 160px;
+             top: 50%;
+             right: 50%;
+             margin-right: 634px;
+             margin-top: 45px
+        }
+        &_4 {
+             width: 450px;
+             height: 450px;
+             border-radius: 450px;
+             border: 70px solid var(--color-red);
+             bottom: 50%;
+             margin-bottom: 15px;
+             right: 50%;
+             margin-right: 403px;
+         }
+    }
+    &__head {
+        position: relative;
+    }
+    &__body {
+        position: relative;
+     }
+    &__footer {
+        position: relative;
+        background-color: var(--color-back);
+        padding-top: 52px;
+        padding-bottom: 100px;
+        &:before {
+             position: absolute;
+             top: 0;
+             left: 50%;
+             margin-left: -40px;
+             width: 0;
+             height: 0;
+             border-style: solid;
+             border-width: 30px 40px 0 40px;
+             border-color: #fff transparent transparent transparent;
+             content: '';
+             z-index: 10;
+         }
+        .main-business {
+            &__title {
+                 font-size: 60px;
+                 margin-bottom: 60px;
+             }
+        }
+    }
+    &__background {
+         width: 100%;
+         background-position: 50% 50%;
+         background-repeat: no-repeat;
+         background-size: cover;
+         margin-left: auto;
+         margin-right: auto;
+         display: block;
+         overflow: hidden;
+         position: absolute;
+         height: 100%;
+    }
+    &__layout {
+         background-color: #3722b4;
+         opacity: 0.9;
+    }
+    &__title {
+        position: relative;
+        padding-top: 197px;
+        padding-bottom: 112px;
+        .button-back {
+            top: 136px;
+        }
+        .kit-title {
+            padding: 10px 0;
+        }
+    }
+    &__pic {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 664px;
+        margin-top: -71px;
+        margin-right: 40px;
+        z-index: 10;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__info {
+        display: inline-block;
+        position: relative;
+        max-width: 220px;
+        vertical-align: top;
+        margin-top: 31px;
+        font-size: 14px;
+        /*line-height: 2.14;*/
+        text-align: left;
+        text-transform: uppercase;
+        color: #000000;
+        z-index: 1;
+        span {
+            display: block;
+            padding: 7px 0;
+        }
+    }
+    &__content {
+        &-head {
+            position: relative;
+            margin-bottom: 60px;
+        }
+        &-body {
+            position: relative;
+            margin-bottom: 70px;
+            h1 {
+                font-family: var(--font-base);
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.42;
+                letter-spacing: normal;
+                text-align: left;
+                color: var(--color-font);
+                margin-bottom: 24px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.67;
+                margin-bottom: 24px;
+            }
+            strong {
+                font-weight: 900;
+            }
+            img {
+                margin-bottom: 32px;
+                max-width: 960px;
+            }
+        }
+    }
+    &__share {
+         display: inline-block;
+         width: auto;
+         min-height: 60px;
+         background-color: var(--color-green);
+         border-radius: 67px;
+         margin: 0 auto 101px;
+         padding: 0 20px 0 34px;
+        span {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: var(--color-font);
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 730px;
+        }
+        ul {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 27px;
+                &:last-child {
+                     margin-right: 27px;
+                 }
+                a {
+                    display: block;
+                    padding: 5px 0;
+                    transition: all .2s easeInOutCubic;
+                    &:hover {
+                         opacity: .8;
+                    }
+                    &.vk {
+                        @mixin io icon/social/vk, svg;
+                         background-size: 27px 15px;
+                         width: 27px;
+                         height: 15px;
+                    }
+                    &.ok {
+                        @mixin io icon/social/ok-green, svg;
+                    }
+                    &.fb {
+                        @mixin io icon/social/fb, svg;
+                         background-size: 12px 23px;
+                         width: 12px;
+                         height: 23px;
+                    }
+                }
+            }
+        }
+        &-block {
+             position: relative;
+             text-align: center;
+        }
+    }
+}

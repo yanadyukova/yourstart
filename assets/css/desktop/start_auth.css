@@ -1,0 +1,38 @@
+.start__inner{
+    padding-top: 100px;
+    min-height: 500px;
+}
+
+.start-container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.start-desc{
+    margin-bottom: 40px;
+}
+
+.main-start{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:flex-start;
+    margin-bottom: 50px;
+}
+.main-start__video{
+    position: relative;
+}
+
+.main-start__video .video-link {
+    width: 300px;
+}
+.main-start__video .start-desc{
+    font-size: 16px;
+    width: 300px;
+    margin-top: 15px;
+}

@@ -1,0 +1,310 @@
+.map {
+    position: relative;
+    &__inner {
+    }
+}
+
+.map-search {
+    display: none;
+    position: relative;
+    z-index: 300;
+    &.active {
+        display: block;
+    }
+    &__inner {
+        position: relative;
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        height: 48px;
+        background-color: #ffffff;
+        border: none;
+        font-size: 14px;
+        line-height: 48px;
+        padding-left: 66px;
+        padding-right: 20px;
+    }
+    &__button {
+        @mixin io icon/search, svg;
+        background-position: 50% 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 53px;
+        height: 100%;
+        border: none;
+    }
+    &__foot {
+
+    }
+    &__result {
+        font-size: 14px;
+        color: #fff;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+}
+
+.map-sorting {
+    background-color: #50e3c2;
+    padding: 15px 0;
+    display: none;
+    position: relative;
+    z-index: 300;
+    &.active {
+        display: block;
+    }
+    &__title {
+        font-size: 16px;
+    }
+    &__body {
+        margin-top: 13px;
+    }
+    &__list {
+        ul {
+            margin: 0;
+            margin-right: -10px;
+            li {
+                display: inline-block;
+                margin-right: 6px;
+                margin-bottom: 10px;
+                label {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0;
+                    display: block;
+                    input {
+                        position: absolute;
+                        top: 0;
+                        right: 100%;
+                        &:checked + span {
+                            background-color: #f8e71c;
+                            &:before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    span {
+                        position: relative;
+                        font-size: 13px;
+                        line-height: 32px;
+                        color: #000;
+                        display: block;
+                        height: 30px;
+                        border-radius: 30px;
+                        background-color: #ffffff;
+                        padding: 0 25px;
+                        transition: all .2s easeInOutCubic;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #F0E6F9;
+                        }
+                        &:before {
+                            @mixin io icon/close-button, svg;
+                            background-position: 50% 50%;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            width: 25px;
+                            content: '';
+                            transition: all .2s easeInOutCubic;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.map-content {
+    background-color: #f1618b;
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 16px;
+        background-color: #f1618b;
+        content: '';
+    }
+    &__inner {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__head {
+        padding-top: 20px;
+    }
+    &__back {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    &__title {
+        margin-top: 15px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #01034f;
+        text-transform: uppercase;
+    }
+    &__desc {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+    }
+    &__result {
+        font-size: 12px;
+        margin-top: 15px;
+        color: #fff;
+        text-align: center;
+    }
+    &__body {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    &__search {
+        margin-top: 20px;
+    }
+    &__sorting {
+        margin-top: 25px;
+    }
+}
+
+.map-google {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    display: none;
+    &.active {
+        display: block;
+    }
+    &__iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.map-list {
+    &__inner {
+    }
+}
+
+.map-card {
+    display: block;
+    width: 280px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+    &__inner {
+
+    }
+    &__head {
+        position: relative;
+        background-color: #051853;
+        .video-link {
+            box-shadow: none;
+            opacity: .7;
+            padding-bottom: 0;
+            height: 200px;
+            /*&:before,
+            &:after {
+                transform: scale(.6);
+            }*/
+        }
+    }
+    &__label {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 14px;
+        background-color: #f8e71c;
+        border-radius: 100px;
+        z-index: 10;
+        height: 24px;
+        line-height: 24px;
+        text-transform: uppercase;
+        padding: 0 17px;
+    }
+    &__media {
+
+    }
+    &__body {
+
+    }
+    &__link {
+        display: block;
+        padding: 20px;
+    }
+    &__title {
+        font-size: 21px;
+        font-weight: bold;
+        color: #01034f;
+        text-transform: uppercase;
+    }
+    &__desc {
+        display: block;
+        font-size: 21px;
+        color: #01034f;
+    }
+    &__foot {
+        background-color: #f8e71c;
+    }
+    &__caption {
+        font-size: 16px;
+        line-height: 20px;
+        color: #01034f;
+        padding: 11px 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .map-content {
+        width: 680px;
+        &.full {
+            width: 990px;
+        }
+        &-toggle {
+            left: 680px;
+            &.active {
+                left: 990px;
+            }
+        }
+    }
+    .map-google {
+        margin-left: 680px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .map-content {
+        width: 990px;
+        &.full {
+            width: 1290px;
+        }
+        &-toggle {
+            left: 990px;
+            &.active {
+                left: 1290px;
+            }
+        }
+    }
+    .map-google {
+        margin-left: 990px;
+    }
+}

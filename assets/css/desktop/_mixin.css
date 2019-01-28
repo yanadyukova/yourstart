@@ -1,0 +1,13 @@
+@define-mixin i $image, $type: png {
+    background: url('/images/desktop/$(image)@2x.$(type)') 0 0 no-repeat;
+    background-size: size('public/images/desktop/$(image)@2x.$(type)', 2);
+    width: width('public/images/desktop/$(image)@2x.$(type)', 2);
+    height: height('public/images/desktop/$(image)@2x.$(type)', 2);
+}
+
+@define-mixin io $image, $type: png {
+    background: url('/images/desktop/$(image).$(type)') 0 0 no-repeat;
+    background-size: size('public/images/desktop/$(image).$(type)');
+    width: width('public/images/desktop/$(image).$(type)');
+    height: height('public/images/desktop/$(image).$(type)');
+}

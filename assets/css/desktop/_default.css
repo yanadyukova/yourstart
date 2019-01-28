@@ -1,0 +1,66 @@
+:root {
+    --font-base: 'Roboto', sans-serif;;
+    --font: 'Open Sans', sans-serif;
+
+    --color-blue: #3E20B9;
+    --color-green: #50E3C2;
+    --color-red: #F1628B;
+    --color-ligth: #F9F9F9;
+    --color-white: #ffffff;
+    --color-aqua-marine: #50e3c2;
+
+    --color-font: #01034F;
+    --color-back: #4331AA;
+}
+
+html, body {
+    font-family: var(--font-base);
+    min-width: 1000px;
+    line-height: 1.16;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    > img {
+        display: none;
+    }
+}
+
+input, button {
+    font-family: var(--font-base);
+    &:focus {
+      outline: 1px auto var(--color-font);
+    }
+}
+
+button {
+    cursor: pointer;
+    &[disabled] {
+        color: inherit;
+        cursor: default;
+    }
+}
+
+a {
+    font-family: var(--font-base);
+    color: var(--color-green);
+    &:focus {
+      outline: 1px auto var(--color-font);
+    }
+    &:hover {
+        text-decoration: none !important;
+        color: #7bf3d8;
+    }
+}
+
+
+::selection {
+    background: #F1628B;
+}
+input, button, a {
+    &:focus {
+      outline-color: #F1628B;
+    }
+}

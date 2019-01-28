@@ -1,0 +1,360 @@
+.map {
+    height: 100%;
+    position: relative;
+    &__inner {
+        height: 100%;
+    }
+}
+
+.map-search {
+    &__body {
+        display: inline-block;
+        width: 365px;
+        position: relative;
+    }
+    &__input {
+        @mixin io icon/search, svg;
+        background-position: 13px 50%;
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        background-color: #ffffff;
+        border: solid 1px #e2e2e2;
+        font-size: 14px;
+        line-height: 50px;
+        padding-left: 42px;
+        padding-right: 60px;
+    }
+    &__button {
+        @mixin io icon/search-arrow, svg;
+        background-position: 55% 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        border: solid 1px #e2e2e2;
+        border-left: none;
+        background-color: #50e3c2;
+        transition: color, background-color, .2s easeInOutCubic, outline 0s;
+        &:focus {
+            outline-width: 1px;
+        }
+        &:hover {
+            color: var(--color-font);
+            background-color: #7bf3d8;
+        }
+        &:active {
+            border-color: #7bf4d9;
+            background-color: #7ed1bf;
+        }
+    }
+    &__foot {
+
+    }
+    &__result {
+        font-size: 14px;
+        color: #fff;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+}
+
+.map-sorting {
+    &__title {
+        font-size: 16px;
+        color: #fff;
+    }
+    &__body {
+        margin-top: 13px;
+    }
+    &__list {
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                label {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0;
+                    input {
+                        position: absolute;
+                        top: 0;
+                        right: 100%;
+                        &:checked + span {
+                            background-color: #f8e71c;
+                            &:before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    span {
+                        position: relative;
+                        font-size: 14px;
+                        line-height: 30px;
+                        color: #000;
+                        display: block;
+                        height: 30px;
+                        border-radius: 30px;
+                        background-color: #ffffff;
+                        padding: 0 35px;
+                        transition: all .2s easeInOutCubic;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #F0E6F9;
+                        }
+                        &:before {
+                            @mixin io icon/close-button, svg;
+                            background-position: 50% 50%;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            width: 35px;
+                            content: '';
+                            transition: all .2s easeInOutCubic;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @mixin io icon/logo, svg;
+    display: block;
+    margin-top: 17px;
+    margin-left: 20px;
+}
+
+.map-content {
+    @mixin i bg/6, jpg;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 465px;
+    height: 100vh;
+    background-color: #f1618b;
+    z-index: 715;
+    transition: all .5s easeInOutCubic;
+    &.full {
+        width: 680px;
+    }
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 16px;
+        background-color: #f1618b;
+        content: '';
+    }
+    &-toggle {
+        position: absolute;
+        top: 50%;
+        margin-top: -35px;
+        margin-left: -35px;
+        left: 465px;
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+        background-color: #f1618b;
+        z-index: 100;
+        transition: all .5s easeInOutCubic;
+        &:before {
+            @mixin io icon/toggle-button, svg;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 35px;
+            height: 100%;
+            content: '';
+            transition: all .2s easeInOutCubic;
+        }
+        &.active {
+            left: 680px;
+            &:before {
+                transform: rotate(180deg);
+                margin-left: -5px;
+            }
+        }
+    }
+    &__inner {
+        height: 100%;
+        overflow: auto;
+    }
+    &__head {
+        position: relative;
+        padding-top: 70px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &__back {
+        position: absolute;
+        top: 80px;
+        left: 40px;
+    }
+    &__title {
+        padding-left: 120px;
+        font-size: 50px;
+        font-weight: bold;
+        color: #01034f;
+        padding-right: 10px;
+        text-transform: uppercase;
+    }
+    &__desc {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        margin-right: -20px;
+    }
+    &__body {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &__search {
+        margin-top: 20px;
+    }
+    &__sorting {
+        margin-top: 25px;
+    }
+}
+
+.map-google {
+    position: relative;
+    height: calc(100vh);
+    margin-left: 465px;
+    &.active {
+        display: block;
+    }
+    &__iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.map-list {
+    &__inner {
+        margin-right: -10px;
+    }
+}
+
+.map-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+    &__inner {
+
+    }
+    &__head {
+        position: relative;
+        background-color: #051853;
+        .video-link {
+            box-shadow: none;
+            opacity: .7;
+            padding-bottom: 0;
+            height: 200px;
+            &:before,
+            &:after {
+                transform: scale(.6);
+            }
+        }
+    }
+    &__label {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 14px;
+        background-color: #f8e71c;
+        border-radius: 100px;
+        z-index: 10;
+        height: 24px;
+        line-height: 24px;
+        text-transform: uppercase;
+        padding: 0 17px;
+    }
+    &__media {
+
+    }
+    &__body {
+
+    }
+    &__link {
+        display: block;
+        padding: 20px;
+    }
+    &__title {
+        font-size: 21px;
+        font-weight: bold;
+        color: #01034f;
+        text-transform: uppercase;
+    }
+    &__desc {
+        display: block;
+        font-size: 21px;
+        color: #01034f;
+    }
+    &__foot {
+        background-color: #f8e71c;
+    }
+    &__caption {
+        font-size: 16px;
+        line-height: 20px;
+        color: #01034f;
+        padding: 11px 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .map-content {
+        width: 680px;
+        &.full {
+            width: 990px;
+        }
+        &-toggle {
+            left: 680px;
+            &.active {
+                left: 990px;
+            }
+        }
+    }
+    .map-google {
+        margin-left: 680px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .map-content {
+        width: 990px;
+        &.full {
+            width: 1290px;
+        }
+        &-toggle {
+            left: 990px;
+            &.active {
+                left: 1290px;
+            }
+        }
+    }
+    .map-google {
+        margin-left: 990px;
+    }
+}

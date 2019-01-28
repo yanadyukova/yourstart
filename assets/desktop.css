@@ -1,0 +1,37 @@
+@import url(css/desktop/_reset.css);
+@import url(css/desktop/_mixin.css);
+@import url(css/desktop/_default.css);
+
+@import url(../public/node_modules/swiper/dist/css/swiper.css);
+/*@import url(../public/node_modules/gridstack/dist/gridstack.css);
+@import url(../public/node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css);*/
+
+@import url(blocks/modal/bootstrap.css);
+@import url(blocks/modal/index.css);
+@import url(blocks/scroller/index.css);
+
+@import url(css/desktop/kit.css);
+@import url(css/desktop/button.css);
+@import url(css/desktop/landing.css);
+@import url(css/desktop/main.css);
+@import url(css/desktop/video.css);
+@import url(css/desktop/olapic.css);
+@import url(css/desktop/footer.css);
+@import url(css/desktop/swiper.css);
+@import url(css/desktop/header.css);
+@import url(css/desktop/nav.css);
+@import url(css/desktop/lang.css);
+@import url(css/desktop/referal.css);
+@import url(css/desktop/form.css);
+@import url(css/desktop/stories.css);
+@import url(css/desktop/map.css);
+@import url(css/desktop/personal-story.css);
+@import url(css/desktop/business.css);
+@import url(css/desktop/auth.css);
+@import url(css/desktop/travel.css);
+@import url(css/desktop/article.css);
+@import url(css/desktop/pin.css);
+@import url(css/desktop/gallery.css);
+@import url(css/desktop/start_auth.css);
+@import url(css/desktop/autocomplete.css);
+@import url(css/desktop/poster.css);

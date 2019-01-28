@@ -1,0 +1,102 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 700;
+    /*pointer-events: none;*/
+    border-bottom: transparent solid 1px;
+    transition: all .3s linear;
+    &.active {
+        background-color: #ffffff;
+        border-bottom-color: lightgray;
+    }
+    * a {
+        pointer-events: all;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+
+    }
+    &__logo {
+        @mixin io icon/logo, svg;
+        display: block;
+    }
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+    }
+    &-button {
+        height: 40px;
+        border-radius: 40px;
+        background-color: #fff;
+        margin-left: 16px;
+        border: solid 1px #dbdbdb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1;
+        color: #000000 !important;
+        text-transform: uppercase;
+        transition: all .2s easeInOutCubic;
+        max-width: 400px;
+        overflow: hidden;
+        white-space: nowrap;
+        outline: none !important;
+        span {
+            padding-top: 1px;
+        }
+        &:hover {
+            background-color: color(#ffffff shade(5%));
+        }
+        &:active {
+            background-color: color(#ffffff shade(10%));
+        }
+        &_default {
+            background-color: #50e3c2;
+            border: none !important;
+            color: #01034f !important;
+            &:hover {
+                background-color: #7bf3d8;
+            }
+            &:active {
+                background-color: #7ed1bf;
+            }
+        }
+    }
+    &__lang {
+        display: inline-block;
+        vertical-align: top;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        /*background-color: rgba(255, 255, 255, .5);*/
+        background-color: #fff;
+        margin-left: 16px;
+        border: solid 1px #dbdbdb;
+    }
+    &__nav {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 16px;
+    }
+}
+
+@media(min-width: 1281px) {
+    .header {
+        &__inner {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+}

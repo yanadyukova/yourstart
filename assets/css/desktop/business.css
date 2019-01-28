@@ -1,0 +1,54 @@
+.landing-section {
+    &_business {
+        &_page {
+            padding-top: 110px;
+            &::before {
+                display: none;
+            }
+            .landing-section__circle {
+                &_1 {
+                    top: -155px;
+                    margin-top: 0;
+                    margin-left: -641px;
+                    /*width: 310px;
+                    height: 310px;*/
+                    border-radius: 100%;
+                    border-width: 60px;
+                }
+                &_2 {
+                    top: 580px;
+                    left: 50%;
+                    margin-top: 0;
+                    margin-left: 270px;
+                    /*width: 440px;
+                    height: 440px;*/
+                    border-radius: 100%;
+                    border:70px solid #50e3c2;
+                }
+            }
+        }
+    }
+}
+
+.main-business {
+    &__title {
+        position: relative;
+    }
+    &__list {
+        &_page {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-right: auto;
+            margin-left: auto;
+            width: 900px;
+        }
+    }
+    &-article {
+        &_page {
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

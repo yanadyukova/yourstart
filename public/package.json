@@ -1,0 +1,33 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "",
+  "main": "desktop.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@egjs/visible": "^2.1.0",
+    "babel-polyfill": "^6.26.0",
+    "baron": "^3.0.3",
+    "bootstrap": "^4.0.0-beta.2",
+    "es6-promise-promise": "^1.0.0",
+    "geocomplete": "^1.7.0",
+    "gridstack": "^0.3.0",
+    "isotope-layout": "^3.0.5",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jquery.maskedinput": "^1.4.1",
+    "js-cookie": "^2.2.0",
+    "js-marker-clusterer": "^1.0.0",
+    "markerclustererplus": "^2.1.4",
+    "node-js-marker-clusterer": "^1.0.0",
+    "popper.js": "^1.12.9",
+    "selectize": "^0.12.4",
+    "skrollr": "^0.6.26",
+    "snazzy-info-window": "^1.1.1",
+    "swiper": "^4.1.0"
+  }
+}
