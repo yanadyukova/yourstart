@@ -21,6 +21,7 @@ class CreateStoriesTable extends Migration
             $table->string('city');
             $table->string('country');
             $table->string('status');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

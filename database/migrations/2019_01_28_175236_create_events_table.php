@@ -22,6 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('image');
             $table->date('date');
             $table->string('city');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }
